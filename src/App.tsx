@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import MarkersExample from './MarkersExample';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MarkersExample />
     </div>
   );
-}
+};
 
+export const wrapperStyles = {
+  wrapper: {
+    padding: '15px',
+    marginTop: '15px',
+  },
+  buttonContainer: {
+    display: 'grid',
+    gridAutoFlow: 'column',
+    gridGap: '10px',
+    gridAutoColumns: 'max-content',
+    padding: '10px 0',
+  },
+};
 export default App;
